@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./MyHome.css"
 
 function MyHome() {
   const [employeeList, setEmployeeList] = useState([]);
@@ -188,15 +189,15 @@ function MyHome() {
                 <div className="d-flex">
                   <input 
                     type="number" 
-                    style={{width:"300px"}}
+                    style={{width:"350px"}}
                     placeholder="10000..." 
                     className="form-control"
                     onChange={(event) => {
                       setNewWage(event.target.value)
                     }}
                   />
-                  <button className="btn btn-warning" onClick={() => {updateEmployeeWage(val.id)}}>อัปเดต</button>
-                  <button className="btn btn-danger" onClick={() => {deleteEmployeeWage(val.id)}}>ลบข้อมูล</button>
+                  <button className="btn btn-warning" style={{margin:"5px"}} onClick={() => {updateEmployeeWage(val.id)}}>อัปเดต</button>
+                  <button className="btn btn-danger" style={{margin:"5px"}} onClick={() => {deleteEmployeeWage(val.id)}}>ลบข้อมูล</button>
                 </div>
               </div>
             </div>
