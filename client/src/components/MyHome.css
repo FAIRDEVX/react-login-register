@@ -1,4 +1,11 @@
-* {
+.home-container {
     max-width: 800px;
     margin: 10px auto;
+}
+
+.btn-logout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }

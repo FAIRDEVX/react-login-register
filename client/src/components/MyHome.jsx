@@ -92,9 +92,16 @@ function MyHome() {
       });
   }, []);
 
+  const handleLogOut = (event) => {
+    event.preventDefault();
+    localStorage.removeItem("token");
+    window.location = "/MyLogin";
+  }
+
   return (
     <div className="home-container">
       <h1>Employee Infomation</h1>
+      <button className="btn-logout btn btn-primary" onClick={handleLogOut}>ออกจากระบบ</button>
       <div className="infomation">
         <form action="">
           <div className="mb-3">
